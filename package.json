@@ -1,0 +1,27 @@
+{
+  "name": "sync-dispatch",
+  "version": "1.0.0",
+  "description": "redux middleware to handle async operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "build:lib": "rm -r build && mkdir build && mkdir build/lib && webpack --config webpack.config.js",
+    "build:copy": "cp package.json build && cp index.js build",
+    "build": "npm run build:lib && npm run build:copy"
+  },
+  "author": "coudrew",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "redux": "^4.0.4",
+    "webpack": "^4.41.2"
+  }
+}
